@@ -1,9 +1,11 @@
 
 ##Calculo do primeiro dígito
 import re
+import random
 
-cpf = '706.208.621-43'
-nove_digitos = cpf[:11]
+cpf = '706.103.621-43'
+cpf = re.sub(r'[^0-9]', '',cpf)
+nove_digitos = cpf[:9]
 
 tratar_cpf = re.split(r'[. -]', nove_digitos)
 
@@ -50,7 +52,7 @@ tratar_cpf = ''.join(tratar_cpf)
 
 validador_de_cpf = (f'{tratar_cpf}{resultado_primeiro_digito}{resultado_segundo_digito}')
 
-cpf_para_validacao = re.split(r'[. -]',cpf)
+cpf_para_validacao = re.sub(r'[^0-9]','',cpf)
 cpf_para_validacao = ''.join(cpf_para_validacao)
 
 if validador_de_cpf == cpf_para_validacao:
