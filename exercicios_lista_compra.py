@@ -18,24 +18,32 @@ while True:
             lista_de_compras.append(item)
 
         elif(menu == 2):
+        
             os.system('clear')
             item = input("Informe o item que deseja remover:")
+           
             for itens in lista_de_compras[:]:
+               
                 if(item == itens):
                     lista_de_compras.remove(itens)
                 else:
                     print("Item não exite")
                     continue
+                
         elif(menu == 3):
             os.system('clear')
+          
             if(len(lista_de_compras) < 1):
                 print("Ainda não existe itens na lista")
             else:
+               
                 for indice, item in enumerate(lista_de_compras):
                     print(f'{indice + 1}-{item}')
+       
         else:
             print("Valor informado é inválido")
             continue
+   
     except:
         print("Valor informado não é inválido")
     
