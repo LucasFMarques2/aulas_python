@@ -1,7 +1,7 @@
 
 ##Calculo do primeiro dígito
 import re
-import random
+
 
 cpf = '706.103.621-43'
 cpf = re.sub(r'[^0-9]', '',cpf)

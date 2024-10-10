@@ -1,5 +1,6 @@
 numero = input("Informe um número:")
 
+
 try:
    numero_formatado = int(numero)
    if(numero_formatado % 2 == 0):
