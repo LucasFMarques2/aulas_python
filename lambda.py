@@ -38,3 +38,18 @@ novos_produtos =[
 ]
 
 print(*novos_produtos, sep='\n')
+
+def multiplica(x ,y):
+    return x * y
+
+numeros = [1,2,3,4,5,6,7]
+multiplica = [multiplica(numero, 2) for numero in numeros]
+
+print(multiplica)
+
+#condicional
+
+numeros=[1,2,3,4,5,6,7,8,9,10]
+transofromar_numero = [numero if numero != 6 else 600 for numero in numeros]
+
+print(transofromar_numero)
